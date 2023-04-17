@@ -48,7 +48,7 @@ public class EmployeeController {
 
         Boolean bResult = false;
         bResult = empRepo.save(employeeForm);
-
+        System.out.println(bResult);
         return "redirect:/employees/home";
     }
 
@@ -58,6 +58,7 @@ public class EmployeeController {
         Employee emp = empRepo.findByEmailId(email);
 
         Boolean bResult = empRepo.delete(emp);
+        System.out.println(bResult);
 
         return "redirect:/employees/home";
     }
